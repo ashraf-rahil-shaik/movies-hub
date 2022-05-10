@@ -1,16 +1,25 @@
 import * as React from 'react';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+
+import { Whatshot } from '@mui/icons-material';
+import MovieIcon  from '@mui/icons-material/Movie';
+import TvIcon from '@mui/icons-material/Tv';
+import SearchIcon from '@mui/icons-material/Search';
+
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box sx={{ width: "100%",
+            position:"fixed",
+            bottom:0,
+            zIndex: 100,
+
+}}>
       <BottomNavigation
         showLabels
         value={value}
@@ -18,9 +27,10 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="Trending" icon={<WhatshotIcon />} />
+        <BottomNavigationAction label="Movies" icon={<MovieIcon />} />
+        <BottomNavigationAction label="TV Series" icon={<TvIcon />} />
+        <BottomNavigationAction label="Search" icon={<SearchIcon />} />
       </BottomNavigation>
     </Box>
   );
