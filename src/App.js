@@ -1,8 +1,16 @@
-
-import { BrowserRouter} from 'react-router-dom';
+import React from "react";
+import { Container } from '@mui/material';
+import { BrowserRouter , Route , Routes} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import SimpleBottomNavigation from './components/MainNav';
+import Trending from './Pages/Trending/Trending';
+import Movies from './Pages/Movies/Movies';
+import Search from './Pages/Search/Search';
+import Series from './Pages/Series/Series';
+
+
+
 
 function App() {
   return (
@@ -11,17 +19,19 @@ function App() {
     
     <Header />
   <div className="App">
- <Containter>
-   <Switch>
-<Route path = '/' component ={Trending} exact />
-<Route path = '/' component ={Movies} />
-<Route path = '/' component ={Series} />
-<Route path = '/' component ={Search} />
+   
+ <Container>
+   <Routes>
+<Route  path = "/" element = {<Trending />} exact/>
+<Route path = "/movies" element = {<Movies />} />
+<Route path = "/series" element = {<Series />} />
+<Route path = "/search" element = {<Search />} />
 
-     </Switch>
- </Containter>
-  </div>
+     </Routes>
+ </Container>
+  
     <SimpleBottomNavigation />
+    </div>
     </BrowserRouter>
  
     
