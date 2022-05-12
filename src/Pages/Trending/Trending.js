@@ -10,7 +10,7 @@ const [content, setContent] = useState([]);
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`
     );
-    console.log(data);
+    console.log(data.results);
 
     setContent(data.results);
   }
@@ -22,7 +22,11 @@ const [content, setContent] = useState([]);
 <span className='pageTitle'>Trending</span>
 <div className ='trending'>{
   content && content.map((c)=>(
-    <SingleContent key={c.id} />
+    <SingleContent key={c.id} id = {c.id} poster={c.poster_path} title={c.title}
+    date={c.frist_air_date}
+    media_type={c.media_type}
+    vote_average = {c.vote_average}
+    />
   ))
 }</div>
 <Outlet />
