@@ -5,12 +5,12 @@
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    background-color: #44238af9;
+    background-color: #046576f9;
     font-family: 'Bangers', cursive;
     font-size: 4vw;
     padding-bottom: 15px;
     box-shadow: 0px 1px 5px rgb(13, 13, 13);
-    color: rgb(243, 244, 247);
+    color: rgb(14, 14, 14);
     z-index: 100;
   }
   

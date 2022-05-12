@@ -1,6 +1,10 @@
+*{
+  scroll-behavior: smooth;
+}
+
 .App {
   min-height: 100vh;
-  background-color: #cfd6f6;
+  background-color: #cff0f9;
   color: rgb(0, 0, 0);
   padding-top: 130px;
   padding-bottom: 70px;
@@ -9,5 +13,23 @@
 @media (max-width: 700px) {
   .App {
     padding-top: 70px;
+  }
+}
+.pageTitle {
+  text-transform: uppercase;
+  display: flex;
+  background-color: rgb(231, 242, 244);
+  justify-content: center;
+  font-family:sans-serif;
+ font-style: italic;
+  font-size: 2vw;
+  padding: 4px;
+  border-radius: 20px;
+  color: rgb(23, 67, 72);
+}
+
+@media (max-width: 1000px) {
+  .pageTitle {
+    font-size: 6.4vw;
   }
 }
