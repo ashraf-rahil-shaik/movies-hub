@@ -21,7 +21,8 @@
   
   @media (max-width: 550px) {
     .media {
-      width: 46%;
+      width: 42%;
+      height:100;
     }
   }
   
