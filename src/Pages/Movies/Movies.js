@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Outlet } from 'react-router-dom'
 import SingleContent from '../../components/SingleContent/SingleContent'
 import Genres from '../../components/Genres/Genres'
-
+import CustomPagination from '../../components/Pagination/CustomPagination'
 const Movies = () => {
   const [content, setContent] = useState([]);
   const fetchMovie = async () => {
@@ -31,7 +31,8 @@ fetchMovie()
     />
   ))
 }</div>
-        <Outlet />
+     <CustomPagination />
+        <Outlet /> 
     </div>
   )
 }
