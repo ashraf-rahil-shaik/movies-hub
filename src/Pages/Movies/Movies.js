@@ -5,10 +5,11 @@ import SingleContent from '../../components/SingleContent/SingleContent'
 import Genres from '../../components/Genres/Genres'
 import CustomPagination from '../../components/Pagination/CustomPagination'
 const Movies = () => {
+  const [page,setPage] =useState(1)
   const [content, setContent] = useState([]);
   const fetchMovie = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
     );
     
 
@@ -16,7 +17,8 @@ const Movies = () => {
   }
   useEffect(()=>{
 fetchMovie()
-  },[])
+// eslint-disable-next-line
+  },[page])
   return (
     <div>
    
@@ -31,7 +33,7 @@ fetchMovie()
     />
   ))
 }</div>
-     <CustomPagination />
+     <CustomPagination setPage={setPage} />
         <Outlet /> 
     </div>
   )
