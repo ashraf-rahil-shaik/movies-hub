@@ -7,9 +7,11 @@ import SingleContent from '../../components/SingleContent/SingleContent'
 const Series = () => {
   const [page,setPage] =  useState(1)
   const [content,setContent] = useState([])
+  const [numOfPages,setNumOfPages]=useState()
   const fetchSeries = async () => {
     const {data} = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&page=${page}`)
     setContent(data.results)
+    setNumOfPages(data.total_pages)
   }
  
   useEffect(() =>{
@@ -28,7 +30,7 @@ fetchSeries()
     />
   ))
 }</div>
-<CustomPagination setPage={setPage} />
+<CustomPagination setPage={setPage} numOfPages={numOfPages} />
         <Outlet />
     </div>
   )

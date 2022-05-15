@@ -8,7 +8,7 @@ import CustomPagination from '../../components/Pagination/CustomPagination';
 const Trending = () => {
 
 const [page,setPage] = useState(1)
-
+const [numOfPages,setNumOfPages] = useState()
 const [content, setContent] = useState([]);
   const fetchTrending = async () => {
     const { data } = await axios.get(
@@ -17,10 +17,12 @@ const [content, setContent] = useState([]);
     
 
     setContent(data.results);
+    setNumOfPages(data.total_pages);
   }
   useEffect(()=>{
     window.scroll(0,0);
     fetchTrending();
+    // eslint-disable-next-line
   },[page]);
   return (
     <div className='main'>
@@ -35,7 +37,7 @@ const [content, setContent] = useState([]);
   ))
 }</div>
 <Outlet />
-<CustomPagination setPage={setPage} />
+<CustomPagination setPage={setPage}  numOfPages={numOfPages}/>
     </div>
 
   )
