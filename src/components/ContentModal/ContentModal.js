@@ -13,15 +13,19 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import Carousel from "../Carousel/Carousel";
 
 const style = {
+ 
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
+  width: 500,
+  
+  bgcolor: '#cff0f9',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  color:"black",
+  
 };
 
 export default function ContentModel({children,media_type,id}) {
@@ -63,7 +67,7 @@ useEffect(()=>{
         }}
       >
         <Fade in={open}>
-          <Box sx ={style}>
+          <Box sx ={style} className='Box'>
           {content && (
             <div >
               <div className="ContentModal">
@@ -99,9 +103,9 @@ useEffect(()=>{
                     <i className="tagline">{content.tagline}</i>
                   )}
 
-                  <span className="ContentModal__description">
+                  <div className="ContentModal__description">
                     {content.overview}
-                  </span>
+                  </div>
 
                   <div>
                     <Carousel id={id} media_type={media_type} />
@@ -111,6 +115,7 @@ useEffect(()=>{
                     variant="contained"
                     startIcon={<YouTubeIcon />}
                     color="secondary"
+                    backgroundColor = "red"
                     target="__blank"
                     href={`https://www.youtube.com/watch?v=${video}`}
                   >

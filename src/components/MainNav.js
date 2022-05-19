@@ -4,7 +4,9 @@ import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { useNavigate } from "react-router-dom";
+ // eslint-disable-next-line
 import { Whatshot } from '@mui/icons-material';
+
 import MovieIcon  from '@mui/icons-material/Movie';
 import TvIcon from '@mui/icons-material/Tv';
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,7 +20,7 @@ useEffect(() => {
   else if(value === 1)  navigate("/movies");
   else if(value === 2) navigate("/series");
   else if(value === 3) navigate("/search");
-}, [value]);
+}, [value,navigate]);
 
   return (
     <Box sx={{ width: "100%",

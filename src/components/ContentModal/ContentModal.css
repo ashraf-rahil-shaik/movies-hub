@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-
+.box{
+  width:fit-content;
+  height: 100px;
+}
 .ContentModal__landscape {
   object-fit: contain;
   border-radius: 10px;
+  height: auto;
 }
 
 .ContentModal__portrait {
   display: none;
   object-fit: contain;
   border-radius: 10px;
+  
 }
 
 .tagline {
@@ -33,17 +38,17 @@
 .ContentModal__about {
   padding: 10px;
   width: 95%;
-  height: 90%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   justify-content: space-evenly;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .ContentModal__title {
   height: 12%;
-  font-size: 5vw;
+  font-size: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +56,7 @@
 
 .ContentModal__description {
   display: flex;
-  height: 40%;
+  height: 10%;
   overflow-y: scroll;
   padding: 15px;
   border-radius: 20px;
@@ -64,7 +69,7 @@
   display: none;
 }
 
-@media (min-width: 835px) {
+@media (max-width: 900px ),(max-height: 900px) {
   .ContentModal__landscape {
     display: none;
   }
@@ -83,9 +88,9 @@
     height: 100%;
   }
   .ContentModal__title {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
   }
   .ContentModal__description {
-    font-size: 22px;
+    font-size: 15px;
   }
 }
