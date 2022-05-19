@@ -36,7 +36,7 @@ fetchSearch()
   
   <TextField id="filled-basic" label="Search" variant="filled" style={{flex:1,backgroundColor:"#fff"}} onChange = {(e)=>setSearchText(e.target.value)}/>
   <Button variant='contained' style={{marginLeft:10,backgroundColor:"#046576f9"}}>
-    <SearchIcon />
+    <SearchIcon fontSize='large'/>
   </Button>
   </div>
   
@@ -50,8 +50,8 @@ onChange ={(event,newValue)=>{
 }}
 style={{paddingBottom:5}}
 aria-label = "disable tabs example">
-  <Tab style = {{width:"50%"}} label = "Movies" />
-  <Tab style = {{width:"50%"}} label = "TV Series" />
+  <Tab style = {{width:"50%"}} label = "Search Movies" />
+  <Tab style = {{width:"50%"}} label = "Search TV Series" />
 </Tabs>
 <div className ='trending'>{
   content && content.map((c)=>(
@@ -62,11 +62,12 @@ aria-label = "disable tabs example">
     />
   ))
 }
-{searchText && !content &&(type ? <h2>No Series found</h2>:<h2>No Movies found</h2>)}
+{searchText && !content &&
+(type ? <h2>No Series found</h2> : <h2>No Movies found</h2>)}
 
 
 </div>
-{numOfPages >1 && (<CustomPagination setPage={setPage} numOfPages={numOfPages} />)}
+{numOfPages > 1 && (<CustomPagination setPage={setPage} numOfPages={numOfPages} />)}
 
           <Outlet />
     
