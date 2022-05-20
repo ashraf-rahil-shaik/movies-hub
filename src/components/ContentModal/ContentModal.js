@@ -114,8 +114,7 @@ useEffect(()=>{
                   <Button
                     variant="contained"
                     startIcon={<YouTubeIcon />}
-                    // color="primary"
-                    sx ={{backgroundColor:"red"}}
+                    color="primary"
                     target="__blank"
                     href={`https://www.youtube.com/watch?v=${video}`}
                   >
