@@ -37,13 +37,13 @@ export default function ContentModel({children,media_type,id}) {
 const fetchData = async () =>{
 
   const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
-console.log(data)
+
   setContent(data)}
   const fetchVideo = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     );
-console.log(data)
+console.table([data.results])
     setVideo(data.results[0]?.key);
   };
 useEffect(()=>{
@@ -114,8 +114,8 @@ useEffect(()=>{
                   <Button
                     variant="contained"
                     startIcon={<YouTubeIcon />}
-                    color="secondary"
-                    backgroundColor = "red"
+                    // color="primary"
+                    sx ={{backgroundColor:"red"}}
                     target="__blank"
                     href={`https://www.youtube.com/watch?v=${video}`}
                   >
