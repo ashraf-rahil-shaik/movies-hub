@@ -18,14 +18,15 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 500,
+  
+   width: 450,
   borderRadius:5,
   bgcolor: '#f9ac66',
   border: '2px solid #046576f9',
   boxShadow: 24,
   p: 4,
   color:"black",
-  
+ 
 };
 
 export default function ContentModel({children,media_type,id}) {

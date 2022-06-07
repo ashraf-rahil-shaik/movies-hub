@@ -114,12 +114,16 @@
     align-items: center;
     padding: 10px 0;
     height:50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .ContentModal__about {
-    width: 50%;
+    width: 60%;
     padding: 0;
-    height: 100%;
-    font-size: 3vw;
+    height: 100;
+    font-size: 4vw;
+  
   }
   .ContentModal__title {
     font-size: 3.5vw;
