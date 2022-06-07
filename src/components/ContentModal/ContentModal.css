@@ -28,6 +28,8 @@
   width: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
+
+  
 }
 
 .ContentModal::-webkit-scrollbar {
@@ -43,6 +45,7 @@
   font-family: "Roboto", sans-serif;
   justify-content: space-evenly;
   font-weight: 400;
+
 }
 
 .ContentModal__title {
@@ -51,6 +54,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
+  color:#3a3e59;
 }
 
 .ContentModal__description {
@@ -60,8 +65,9 @@
   padding: 15px;
   border-radius: 30px;
   scrollbar-width: thin; /* Firefox */
-  box-shadow: inset 0 0 5px #000000;
+  box-shadow: inset 0 0 5px #fff;
   text-align: justify;
+
 }
 
 .ContentModal__description::-webkit-scrollbar {

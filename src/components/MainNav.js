@@ -27,6 +27,7 @@ useEffect(() => {
             position:"fixed",
             bottom:0,
             zIndex: 100,
+            backgroundColor: "#000"
 
 }}>
       <BottomNavigation

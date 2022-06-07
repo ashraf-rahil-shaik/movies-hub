@@ -5,8 +5,8 @@
 .App {
 
   min-height: 100vh;
-  background-color: #cff0f9;
-  color: rgb(0, 0, 0);
+  background-color: #ece6ce;
+  color: rgb(7, 7, 7);
   padding-top: 130px;
   padding-bottom: 70px;
   
@@ -20,7 +20,7 @@
 .pageTitle {
   text-transform: uppercase;
   display: flex;
-  background-color: rgb(231, 242, 244);
+  background-color: #f9ac66;
   justify-content: center;
   font-family:sans-serif;
  font-style: italic;
