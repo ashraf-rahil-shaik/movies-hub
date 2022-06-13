@@ -12,7 +12,7 @@
   }
   
   .media:hover {
-    background-color: #ed6b5b;
+    background-color: #ece6ce;
     cursor: pointer;
     color: rgb(0, 0, 0);
     transform: scale(1.05);
